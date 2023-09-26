@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		533816E72ABD19190057FAA3 /* RatesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533816E62ABD19190057FAA3 /* RatesApi.swift */; };
+		533816EA2ABD1C620057FAA3 /* RatesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533816E92ABD1C620057FAA3 /* RatesRouter.swift */; };
+		533816EC2ABD1C700057FAA3 /* CurrencyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533816EB2ABD1C700057FAA3 /* CurrencyRouter.swift */; };
+		53AB29782AC2416000A9594E /* BaseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB29772AC2416000A9594E /* BaseStore.swift */; };
+		53AB297B2AC243E000A9594E /* RatesFluctuationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB297A2AC243E000A9594E /* RatesFluctuationObject.swift */; };
+		53AB297D2AC245D100A9594E /* CurrencySymbolObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB297C2AC245D100A9594E /* CurrencySymbolObject.swift */; };
+		53AB297F2AC245E400A9594E /* RatesHistoricalObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB297E2AC245E400A9594E /* RatesHistoricalObject.swift */; };
+		53AB29812AC25F6100A9594E /* RatesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB29802AC25F6100A9594E /* RatesStore.swift */; };
+		53AB29832AC2628F00A9594E /* CurrencyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB29822AC2628F00A9594E /* CurrencyStore.swift */; };
 		53DC07E12ABBEB3400EAD0AB /* ExchangeRatesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC07E02ABBEB3400EAD0AB /* ExchangeRatesApp.swift */; };
 		53DC07E32ABBEB3400EAD0AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC07E22ABBEB3400EAD0AB /* ContentView.swift */; };
 		53DC07E52ABBEB3500EAD0AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DC07E42ABBEB3500EAD0AB /* Assets.xcassets */; };
@@ -14,6 +23,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		533816E62ABD19190057FAA3 /* RatesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesApi.swift; sourceTree = "<group>"; };
+		533816E92ABD1C620057FAA3 /* RatesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesRouter.swift; sourceTree = "<group>"; };
+		533816EB2ABD1C700057FAA3 /* CurrencyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRouter.swift; sourceTree = "<group>"; };
+		53AB29772AC2416000A9594E /* BaseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStore.swift; sourceTree = "<group>"; };
+		53AB297A2AC243E000A9594E /* RatesFluctuationObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesFluctuationObject.swift; sourceTree = "<group>"; };
+		53AB297C2AC245D100A9594E /* CurrencySymbolObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbolObject.swift; sourceTree = "<group>"; };
+		53AB297E2AC245E400A9594E /* RatesHistoricalObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesHistoricalObject.swift; sourceTree = "<group>"; };
+		53AB29802AC25F6100A9594E /* RatesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesStore.swift; sourceTree = "<group>"; };
+		53AB29822AC2628F00A9594E /* CurrencyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyStore.swift; sourceTree = "<group>"; };
 		53DC07DD2ABBEB3400EAD0AB /* ExchangeRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DC07E02ABBEB3400EAD0AB /* ExchangeRatesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesApp.swift; sourceTree = "<group>"; };
 		53DC07E22ABBEB3400EAD0AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +50,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		533816E32ABD18AE0057FAA3 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				533816E42ABD18E20057FAA3 /* NetworkRepository */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		533816E42ABD18E20057FAA3 /* NetworkRepository */ = {
+			isa = PBXGroup;
+			children = (
+				53AB29792AC2432B00A9594E /* Objects */,
+				53AB29762AC2407000A9594E /* Stores */,
+				533816E82ABD1C4E0057FAA3 /* Routers */,
+				533816E52ABD18FC0057FAA3 /* Apis */,
+			);
+			path = NetworkRepository;
+			sourceTree = "<group>";
+		};
+		533816E52ABD18FC0057FAA3 /* Apis */ = {
+			isa = PBXGroup;
+			children = (
+				533816E62ABD19190057FAA3 /* RatesApi.swift */,
+			);
+			path = Apis;
+			sourceTree = "<group>";
+		};
+		533816E82ABD1C4E0057FAA3 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				533816E92ABD1C620057FAA3 /* RatesRouter.swift */,
+				533816EB2ABD1C700057FAA3 /* CurrencyRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		53AB29762AC2407000A9594E /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				53AB29772AC2416000A9594E /* BaseStore.swift */,
+				53AB29802AC25F6100A9594E /* RatesStore.swift */,
+				53AB29822AC2628F00A9594E /* CurrencyStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		53AB29792AC2432B00A9594E /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				53AB297A2AC243E000A9594E /* RatesFluctuationObject.swift */,
+				53AB297C2AC245D100A9594E /* CurrencySymbolObject.swift */,
+				53AB297E2AC245E400A9594E /* RatesHistoricalObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		53DC07D42ABBEB3400EAD0AB = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +125,7 @@
 		53DC07DF2ABBEB3400EAD0AB /* ExchangeRates */ = {
 			isa = PBXGroup;
 			children = (
+				533816E32ABD18AE0057FAA3 /* DataProvider */,
 				53DC07E02ABBEB3400EAD0AB /* ExchangeRatesApp.swift */,
 				53DC07E22ABBEB3400EAD0AB /* ContentView.swift */,
 				53DC07E42ABBEB3500EAD0AB /* Assets.xcassets */,
@@ -137,8 +212,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				533816EC2ABD1C700057FAA3 /* CurrencyRouter.swift in Sources */,
+				533816EA2ABD1C620057FAA3 /* RatesRouter.swift in Sources */,
+				53AB29782AC2416000A9594E /* BaseStore.swift in Sources */,
+				53AB297F2AC245E400A9594E /* RatesHistoricalObject.swift in Sources */,
 				53DC07E32ABBEB3400EAD0AB /* ContentView.swift in Sources */,
 				53DC07E12ABBEB3400EAD0AB /* ExchangeRatesApp.swift in Sources */,
+				53AB297D2AC245D100A9594E /* CurrencySymbolObject.swift in Sources */,
+				53AB29812AC25F6100A9594E /* RatesStore.swift in Sources */,
+				53AB297B2AC243E000A9594E /* RatesFluctuationObject.swift in Sources */,
+				533816E72ABD19190057FAA3 /* RatesApi.swift in Sources */,
+				53AB29832AC2628F00A9594E /* CurrencyStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +354,13 @@
 				DEVELOPMENT_TEAM = ZA4Z6U42FJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +368,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dio.projeto.mvvm.curso.ExchangeRates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,11 +388,13 @@
 				DEVELOPMENT_TEAM = ZA4Z6U42FJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +402,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dio.projeto.mvvm.curso.ExchangeRates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
