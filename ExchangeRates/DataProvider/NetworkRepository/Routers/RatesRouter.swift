@@ -23,6 +23,10 @@ enum RatesRouter{
     func asUrlRequest() throws -> URLRequest? {
         guard var url = URL(string: RatesApi.baseUrl) else { return nil }
         
+        url.append(queryItems: [
+            URLQueryItem(name: "access_key", value: RatesApi.apiKey),
+        ])
+        
         switch self {
             
         case .fluctuation(base: let base, symbols: let symbols, startDate: let startDate, endDate: let endDate):
@@ -44,7 +48,7 @@ enum RatesRouter{
         var request = URLRequest(url: url.appendingPathComponent(path), timeoutInterval: Double.infinity)
         
         request.httpMethod = HttpMethod.get.rawValue
-        request.addValue(RatesApi.apiKey, forHTTPHeaderField: "apikey")
+        request.addValue(RatesApi.apiKey, forHTTPHeaderField: "apikey") // nao precisa fazer isso
         
         return request
     }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530E62502AC3B58300B5075C /* DataProviderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530E624F2AC3B58300B5075C /* DataProviderManager.swift */; };
+		530E62532AC3B9CC00B5075C /* RatesFluctuationDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530E62522AC3B9CC00B5075C /* RatesFluctuationDataProvider.swift */; };
+		530E62552AC3BB9D00B5075C /* RatesHistoricalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530E62542AC3BB9D00B5075C /* RatesHistoricalDataProvider.swift */; };
+		530E62572AC3BBFE00B5075C /* CurrencySymbolsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530E62562AC3BBFE00B5075C /* CurrencySymbolsDataProvider.swift */; };
 		533816E72ABD19190057FAA3 /* RatesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533816E62ABD19190057FAA3 /* RatesApi.swift */; };
 		533816EA2ABD1C620057FAA3 /* RatesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533816E92ABD1C620057FAA3 /* RatesRouter.swift */; };
 		533816EC2ABD1C700057FAA3 /* CurrencyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533816EB2ABD1C700057FAA3 /* CurrencyRouter.swift */; };
@@ -23,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		530E624F2AC3B58300B5075C /* DataProviderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderManager.swift; sourceTree = "<group>"; };
+		530E62522AC3B9CC00B5075C /* RatesFluctuationDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesFluctuationDataProvider.swift; sourceTree = "<group>"; };
+		530E62542AC3BB9D00B5075C /* RatesHistoricalDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesHistoricalDataProvider.swift; sourceTree = "<group>"; };
+		530E62562AC3BBFE00B5075C /* CurrencySymbolsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbolsDataProvider.swift; sourceTree = "<group>"; };
+		532E231B2AC5104200E94F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		533816E62ABD19190057FAA3 /* RatesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesApi.swift; sourceTree = "<group>"; };
 		533816E92ABD1C620057FAA3 /* RatesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesRouter.swift; sourceTree = "<group>"; };
 		533816EB2ABD1C700057FAA3 /* CurrencyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRouter.swift; sourceTree = "<group>"; };
@@ -50,10 +59,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		530E62512AC3B9AF00B5075C /* RatesDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				530E62522AC3B9CC00B5075C /* RatesFluctuationDataProvider.swift */,
+				530E62542AC3BB9D00B5075C /* RatesHistoricalDataProvider.swift */,
+				530E62562AC3BBFE00B5075C /* CurrencySymbolsDataProvider.swift */,
+			);
+			path = RatesDataProvider;
+			sourceTree = "<group>";
+		};
 		533816E32ABD18AE0057FAA3 /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				530E62512AC3B9AF00B5075C /* RatesDataProvider */,
 				533816E42ABD18E20057FAA3 /* NetworkRepository */,
+				530E624F2AC3B58300B5075C /* DataProviderManager.swift */,
 			);
 			path = DataProvider;
 			sourceTree = "<group>";
@@ -125,6 +146,7 @@
 		53DC07DF2ABBEB3400EAD0AB /* ExchangeRates */ = {
 			isa = PBXGroup;
 			children = (
+				532E231B2AC5104200E94F2D /* Info.plist */,
 				533816E32ABD18AE0057FAA3 /* DataProvider */,
 				53DC07E02ABBEB3400EAD0AB /* ExchangeRatesApp.swift */,
 				53DC07E22ABBEB3400EAD0AB /* ContentView.swift */,
@@ -218,10 +240,14 @@
 				53AB297F2AC245E400A9594E /* RatesHistoricalObject.swift in Sources */,
 				53DC07E32ABBEB3400EAD0AB /* ContentView.swift in Sources */,
 				53DC07E12ABBEB3400EAD0AB /* ExchangeRatesApp.swift in Sources */,
+				530E62552AC3BB9D00B5075C /* RatesHistoricalDataProvider.swift in Sources */,
 				53AB297D2AC245D100A9594E /* CurrencySymbolObject.swift in Sources */,
 				53AB29812AC25F6100A9594E /* RatesStore.swift in Sources */,
+				530E62502AC3B58300B5075C /* DataProviderManager.swift in Sources */,
+				530E62572AC3BBFE00B5075C /* CurrencySymbolsDataProvider.swift in Sources */,
 				53AB297B2AC243E000A9594E /* RatesFluctuationObject.swift in Sources */,
 				533816E72ABD19190057FAA3 /* RatesApi.swift in Sources */,
+				530E62532AC3B9CC00B5075C /* RatesFluctuationDataProvider.swift in Sources */,
 				53AB29832AC2628F00A9594E /* CurrencyStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +380,8 @@
 				DEVELOPMENT_TEAM = ZA4Z6U42FJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExchangeRates/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -388,6 +416,8 @@
 				DEVELOPMENT_TEAM = ZA4Z6U42FJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExchangeRates/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
