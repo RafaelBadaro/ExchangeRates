@@ -18,11 +18,11 @@ struct Fluctuation: Identifiable {
 class FluctuationViewModel: ObservableObject {
     @Published var fluctuations: [Fluctuation] = [
         Fluctuation(symbol: "USD", change: 0.0008, changePct: 0.4175,
-                     endRate: 0.18857),
+                    endRate: 0.18857),
         Fluctuation(symbol: "EUR", change: 0.0003, changePct: 0.1651,
-                     endRate: 0.181353),
+                    endRate: 0.181353),
         Fluctuation(symbol: "GBP", change: -0.0001, changePct: -0.0403,
-                     endRate: 0.158915)
+                    endRate: 0.158915)
     ]
     
 }
@@ -129,30 +129,37 @@ struct RatesFluctuationView: View {
     
     private var ratesFluctuationListView: some View {
         List(searchResult) { fluctuation in
-            VStack {
-                HStack (alignment: .center, spacing: 8){
-                    Text("\(fluctuation.symbol) / BRL")
-                        .font(.system(size: 14, weight: .medium))
-                    Text(
-                        "\(fluctuation.endRate.formatter(decimalPlaces: 2))"
-                    )
-                        .font(.system(size: 14, weight: .bold))
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                    Text(
-                        "\(fluctuation.change.formatter(decimalPlaces: 4, with: true))"
-                    )
-                        .font(.system(size: 14, weight: .bold))
-                        .foregroundColor(fluctuation.change.color)
-                    Text("(\(fluctuation.changePct.toPercentage()))")
-                        .font(.system(size: 14, weight: .bold))
-                        .foregroundColor(fluctuation.changePct.color)
-                }
-                Divider()
-                    .padding(.leading, -20)
-                    .padding(.trailing, -40)
-              }
-            .listRowSeparator(.hidden)
-            .listRowBackground(Color.white)
+            NavigationLink(
+                destination:
+                    RatesFluctuationDetailView(
+                        baseCurrency: "BRL",
+                        rateFluctuation: fluctuation)) {
+                            VStack {
+                                HStack (alignment: .center, spacing: 8){
+                                    Text("\(fluctuation.symbol) / BRL")
+                                        .font(.system(size: 14, weight: .medium))
+                                    Text(
+                                        "\(fluctuation.endRate.formatter(decimalPlaces: 2))"
+                                    )
+                                    .font(.system(size: 14, weight: .bold))
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                    Text(
+                                        "\(fluctuation.change.formatter(decimalPlaces: 4, with: true))"
+                                    )
+                                    .font(.system(size: 14, weight: .bold))
+                                    .foregroundColor(fluctuation.change.color)
+                                    Text("(\(fluctuation.changePct.toPercentage()))")
+                                        .font(.system(size: 14, weight: .bold))
+                                        .foregroundColor(fluctuation.changePct.color)
+                                }
+                                Divider()
+                                    .padding(.leading, -20)
+                                    .padding(.trailing, -40)
+                            }
+                        }
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color.white)
+            
         }
         .listStyle(.plain)
     }
