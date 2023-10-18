@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-
+protocol BaseCurrencyFilterViewDelegate {
+    func didSelected(_ baseCurrency: String)
+}
 
 struct BaseCurrencyFilterView: View {
     
@@ -17,6 +19,8 @@ struct BaseCurrencyFilterView: View {
 
     @State private var searchText = ""
     @State private var selection: String?
+    
+    var delegate: BaseCurrencyFilterViewDelegate?
     
             var searchResults: [CurrencySymbolModel] {
                 if searchText.isEmpty {
@@ -55,6 +59,10 @@ struct BaseCurrencyFilterView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             Button{
+                if let selection {
+                    delegate?.didSelected(selection)
+                }
+                
                 dismiss()
             } label : {
                 Text("OK")
